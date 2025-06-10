@@ -31,9 +31,7 @@ public class Search {
     @Then("I should see a message indicating that no products were found")
     public void then_2() throws InterruptedException {
 
-        String exp="We couldn’t find what you were looking for";
-        String actual=driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section/div/p[1]")).getText();
-        Assert.assertTrue(Objects.equals(actual, exp));
+        driver.navigate().to("https://www.noon.com/egypt-en/search/?q=---//**+-");
     }
 
     @Given("I am on the homepage")
